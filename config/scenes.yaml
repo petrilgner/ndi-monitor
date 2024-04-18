@@ -1,0 +1,25 @@
+Confidence:
+  name: "Proclaim - confidence"
+  style: "bg-primary"
+  ndi_name: "PETR-4ARP8 (Confidence)"
+  low_bandwidth: True
+  low_latency: True
+
+Slides:
+  name: "Proclaim - slidy"
+  style: "bg-warning text-black"
+  ndi_name: "PETR-4ARP8 (Slides)"
+  low_bandwidth: False
+  low_latency: False
+
+
+Logo:
+  name: "Logo a hodiny"
+  style: "bg-secondary"
+  default: true
+  browser: "clock.html"
+
+Time:
+    name: "Time.is"
+    style: "bg-secondary"
+    web: "https://time.is"

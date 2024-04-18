@@ -1,0 +1,52 @@
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+{% from 'bootstrap5/utils.html' import render_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NDI Monitor Tv Ovládání</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {{ bootstrap.load_css() }}
+    <style>
+        body {
+            margin-top: 25px;
+        }
+        .scenes a {
+            display: block;
+            min-height: 150px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-style: normal;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .scenes .active {
+            border: 4px solid yellow;
+            border-radius: 5px;
+        }
+        pre {
+            background: #ddd;
+            padding: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        footer {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        {{ render_messages(container=False, dismissible=True, dismiss_animate=True) }}
+        {% block content %}{% endblock %}
+    </main>
+
+    {{ bootstrap.load_js() }}
+</body>
+</html>

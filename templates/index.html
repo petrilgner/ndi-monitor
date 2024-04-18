@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-10">
+            <h1>Nastavení TV Monitoru</h1>
+        </div>
+        <div class="col-lg-2">
+            <ul>
+                <li>CPU: {{ sys_stats['cpu'] }} %</li>
+                <li>Memory: {{ sys_stats['memory'] }} %</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <p><strong>Poslední přepnutí: </strong> {{ last_switch }}</p>
+    <div class="row row-cols-4 scenes">
+        {% for key, scene in scenes.items() %}
+
+            <a href="{{ url_for('scene_switch', scene=key) }}"
+               class="{{ scene['style'] }}{% if current==key %} active{% endif %} ">
+                <h2>{{ scene['name'] }}</h2>
+            </a>
+        {% endfor %}
+    </div>
+
+    {% if current == '(auto)' %}
+        <h4>Detekované NDI zdroje</h4>
+        <ul>
+            {% for source in ndi_sources %}
+                <li>{{ source }}</li>
+            {% endfor %}
+
+        </ul>
+    {% endif %}
+
+
+{% endblock %}
