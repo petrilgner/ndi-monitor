@@ -46,7 +46,7 @@ def switch_scene(scene_name: str):
         additional_params = ['1' if low_bandwidth else '0']
         if low_latency:
             additional_params += ['-flags', 'low_delay', '-framedrop', '-analyzeduration', '0',
-                                  '-max-probe-packets', '1', '-max_delay', '0', '-probesize', '100000']
+                                  '-max_probe_packets', '1', '-max_delay', '0', '-probesize', '100000']
 
         additional_params += ['-i', scene["ndi_name"]]
         current_process = subprocess.Popen(ffmpeg_base_params + additional_params)
