@@ -1,0 +1,14 @@
+# main configuration
+temp_sensor: 'Composite'
+http_host: 0.0.0.0
+http_port: 5050
+ndi_discover_interval: 15
+
+allow_ips:  # set None to disable check
+  - 127.0.0.1
+  - 192.168.1.3
+
+tv_control:
+  enabled: true
+  adb_ip: 192.168.1.8
+  hdmi_number: 3

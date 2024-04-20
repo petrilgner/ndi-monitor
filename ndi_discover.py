@@ -2,6 +2,8 @@ import time
 import NDIlib as ndi
 from typing import Optional
 
+config_ndi_discover_interval = 10
+
 ndi_find = None
 scenes_callbacks = {}
 default_scene_callback: Optional[callable] = None
@@ -51,7 +53,7 @@ def discover_ndi():
         else:
             last_detected_sources = []
 
-        time.sleep(10)
+        time.sleep(config_ndi_discover_interval)
 
 
 def perform_auto_switch(found_sources: list):
