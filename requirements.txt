@@ -11,3 +11,5 @@ PyYAML==6.0.1
 Werkzeug==3.0.2
 WTForms==3.1.2
 psutil==5.9.8
+cowsay==6.1
+rich==13.7.1

@@ -4,6 +4,8 @@ Confidence:
   ndi_name: "PETR-4ARP8 (Confidence)"
   low_bandwidth: True
   low_latency: True
+  turn_on_tv: True
+  turn_off_tv: True
 
 Slides:
   name: "Proclaim - slidy"
