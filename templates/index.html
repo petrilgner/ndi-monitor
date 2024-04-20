@@ -26,6 +26,20 @@
         {% endfor %}
     </div>
 
+    {% if tv_control %}
+        <h4>Ovládání TV</h4>
+        <div class="row row-cols-4 scenes tv-control">
+            <a href="{{ url_for('tv_control', state='on') }}"
+               class="bg-success">
+                <h2>Zapnout</h2>
+            </a>
+            <a href="{{ url_for('tv_control', state='off') }}"
+               class="bg-danger">
+                <h2>Vypnout</h2>
+            </a>
+        </div>
+    {% endif %}
+
     {% if current == '(auto)' %}
         <h4>Detekované NDI zdroje</h4>
         <ul>
