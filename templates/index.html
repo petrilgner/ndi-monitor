@@ -9,6 +9,7 @@
             <ul>
                 <li>CPU: {{ sys_stats['cpu'] }} %</li>
                 <li>Memory: {{ sys_stats['memory'] }} %</li>
+                {% if 'temp' in sys_stats %}<li>Temp: {{ sys_stats['temp'] }} °C</li>{% endif %}
             </ul>
         </div>
     </div>
